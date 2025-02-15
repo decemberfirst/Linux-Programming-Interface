@@ -35,3 +35,7 @@ int open(const char *pathname, int flags, mode_t mode);
 # read system call
 
 `read` system call takes three parameters. file descriptor (FD), pointer to buffer and number of bytes we want to read respectively. if read succeed, number of bytes that have been read is returned .
+
+# write system call
+
+`write` sytem call takes three parameters. file descriptor (FD), pointer to buffer that you want to flush to disk, at last number of bytes you want to write. if write succeed it returns number of bytes written to the disk. write system call doesnot gurantee that content you write may not be immediately flushed to disk due to batch write.
