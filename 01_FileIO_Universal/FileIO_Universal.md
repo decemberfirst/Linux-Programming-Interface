@@ -1,0 +1,2 @@
+#FILE IO UNIVERSAL
+All system calls that peforms I/O returns non-negative number which unix terms it as file descriptor, abbreviated with FD in short. By convention unix opens three file descriptor 0, 1, and 2 for stdin, stdout, and stderr respectively while the process is created. we could use STDIN_FILENO, STDOUT_FILENO, STDERR FILE_NO as constant to refer 0, 1 and 2 respectively whichi is more readable to the programmers.
