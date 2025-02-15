@@ -1,3 +1,15 @@
 # FILE IO UNIVERSAL
 
-All system calls that perform I/O return a non-negative number, which Unix refers to as a file descriptor (FD for short). By convention, Unix opens three file descriptors—0, 1, and 2—for standard input (stdin), standard output (stdout), and standard error (stderr) respectively, when a process is created. We can use the constants `STDIN_FILENO`, `STDOUT_FILENO`, and `STDERR_FILENO` to refer to 0, 1, and 2, which makes the code more readable.
+All system calls that perform I/O return a non-negative number, which Unix refers to as a file descriptor (FD for short). By convention, Unix opens three file descriptors—0, 1, and 2—for standard input (stdin), standard output (stdout), and standard error (stderr) respectively when a process is created. We can use the constants `STDIN_FILENO`, `STDOUT_FILENO`, and `STDERR_FILENO` to refer to 0, 1, and 2, which makes the code more readable.
+
+# UNIVERSAL IO SYSTEM CALLS
+
+There are three primary system calls that work with different types of files (such as sockets, regular disk files, pipes, etc.): `open`, `read`, and `write`.
+
+## open
+
+The `open` system call is used to open a file. On success, it returns the lowest available non-negative file descriptor (FD). If opening the file fails for various reasons (such as permission denied, file does not exist, etc.), it returns -1. Here is the syntax for the `open` system call:
+
+```c
+int open(const char *pathname, int flags, mode_t mode);
+```
