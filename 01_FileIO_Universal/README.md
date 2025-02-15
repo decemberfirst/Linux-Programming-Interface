@@ -16,6 +16,6 @@ int open(const char *pathname, int flags, mode_t mode);
 
 ### ACCESS MODES
 
--O_RDONLY -> Open the file for read only
--O_RDWR -> Open the file for read and write both
--O_WRONLY -> Open the file for write only
+- O_RDONLY -> Open the file for read only
+- O_RDWR -> Open the file for read and write both
+- O_WRONLY -> Open the file for write only
