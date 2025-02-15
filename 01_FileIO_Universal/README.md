@@ -16,18 +16,18 @@ int open(const char *pathname, int flags, mode_t mode);
 
 ### ACCESS MODES
 
-- O_RDONLY -> Open the file for read only
-- O_RDWR -> Open the file for read and write both
-- O_WRONLY -> Open the file for write only
-- O_CLOEXEC -> Set the close on exec flag
-- O_CREAT -> Create the file if not exists
-- O_DIRECT -> Bypass the buffer cache
-- O_DIRECTORY -> Throw error if pathname is not directory
-- O_EXCL -> Create file exclusively , Often used with O_CREAT
-- O_NOATIME -> Donot update last access time on read sytem call
-- O_NOFOLLOW -> Donot dereference symbolic links
-- O_TRUNC -> Truncate existing file to zero length
-- O_APPEND -> Writes are always appended to a file
-- O_ASYNC -> Generates a signal when I/O possible
-- O_SYNC -> Make file write synchronous
-- O_NONBLOCK -> Open in non blocking mode
+- `O_RDONLY` -> Open the file for read only
+- `O_RDWR` -> Open the file for read and write both
+- `O_WRONLY` -> Open the file for write only
+- `O_CLOEXEC`-> Set the close on exec flag
+- `O_CREAT` -> Create the file if not exists
+- `O_DIRECT` -> Bypass the buffer cache
+- `O_DIRECTORY` -> Throw error if pathname is not directory
+- `O_EXCL` -> Create file exclusively , Often used with O_CREAT
+- `O_NOATIME`-> Donot update last access time on read sytem call
+- `O_NOFOLLOW` -> Donot dereference symbolic links
+- `O_TRUNC` -> Truncate existing file to zero length
+- `O_APPEND` -> Writes are always appended to a file
+- `O_ASYNC` -> Generates a signal when I/O possible
+- `O_SYNC` -> Make file write synchronous
+- `O_NONBLOCK` -> Open in non blocking mode
