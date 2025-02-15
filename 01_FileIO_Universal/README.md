@@ -31,3 +31,7 @@ int open(const char *pathname, int flags, mode_t mode);
 - `O_ASYNC` -> Generates a signal when I/O possible
 - `O_SYNC` -> Make file write synchronous
 - `O_NONBLOCK` -> Open in non blocking mode
+
+# read system call
+
+`read` system call takes three parameters. file descriptor (FD), pointer to buffer and number of bytes we want to read respectively. if read succeed, number of bytes that have been read is returned .
