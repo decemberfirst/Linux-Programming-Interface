@@ -5,7 +5,7 @@
 int main()
 {
     struct passwd *UserPasswdInfo;
-    UserPasswdInfo = getpwnam("rohan");
+    UserPasswdInfo = getpwnam("asdf");
     if (UserPasswdInfo == NULL)
     {
         printf("Didnot find any user with that user name: \n");
