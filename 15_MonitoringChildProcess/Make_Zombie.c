@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
     sleep(1); // Give the child process some time to become a zombie
 
     printf("After sending SIGKILL to zombie (PID=%ld):\n", (long)childPid);
-    snprintf(cmd, CMD_SIZE, "ps -eo pid,stat,cmd | grep %s", basename(argv[0]));
+    snprintf(cmd, CMD_SIZE, "ps aux | grep 'Z' | grep %s", basename(argv[0]));
     system(cmd); // Check the status of the process again
 
 
