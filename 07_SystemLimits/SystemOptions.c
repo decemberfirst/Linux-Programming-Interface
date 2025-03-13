@@ -1,9 +1,12 @@
 #include<stdio.h>
 #include<limits.h>
 #include<unistd.h>
+
+// if used with sysconf
 // returns -1 if the limit is not supported
 // returns 0 if the limit maybe supported, check at runtime
 // returns >0 if the limit is supported
+
 int main() {
     // ---------CHECK POSIX THREADS ARE SUPPORTED OR NOT---------
     #ifdef _POSIX_THREADS
