@@ -1,0 +1,2 @@
+Both alarm() and setitimer() use the same per-process real-time timer. This means that if you set a timer with one function, it will override any previously set timer, whether it was set by alarm() or setitimer().
+For example, if you use alarm(10) to set a timer for 10 seconds, and later use setitimer(ITIMER_REAL, ...), it will cancel the previous alarm() timer and vice versa.
