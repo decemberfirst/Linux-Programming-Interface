@@ -4,7 +4,7 @@
 #include<unistd.h>
 #include<stdio.h>
 #include<stdlib.h>
-#define BUF_LEN (10 * (sizeof(struct inotify_event) + NAME_MAX + 1)) // NAME_MAX BECAUSE NAME FIELD IN inotify_event is of variable length, 1 FOR NULL TERMINATOR
+#define BUF_LEN ((sizeof(struct inotify_event) + NAME_MAX + 1)) // NAME_MAX BECAUSE NAME FIELD IN inotify_event is of variable length, 1 FOR NULL TERMINATOR
 
 static void displayInotifyEvent(struct inotify_event *i) {
     printf("Watch Descriptor: %d\n", i->wd);
