@@ -1,0 +1,15 @@
+sigemptyset : initialization of the signal set to be empty, c doesnot initialize variable by default
+
+sigfillset : initialize signal set with all the signal available like SIGTERM, SIGINT and so-on
+
+sigaddset : add specific signal to the set and manipulated later
+
+sigdelset : after calling this, specific signal is removed from the set
+
+sigismember : checks whether the signal is currently part of the signal set
+
+sigandset : computes the intersection  of two signal sets  left and right and stores the result in set
+
+sigorset : computes the union of two signal sets, left and right and stores the result in the set
+
+sigisemptyset : This function checks whether a signal set is empty, i.e., it has no signals in it. It returns 1 if the set is empty and 0 if the set contains at least one signal.
