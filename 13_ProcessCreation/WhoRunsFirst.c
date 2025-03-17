@@ -5,6 +5,12 @@
 #include<sys/wait.h>
 
 /**
+ * TO CHANGE SCHEDULING POLICY:
+ * echo 1 > /proc/sys/kernel/sched_child_runs_first
+ * echo 0 > /proc/sys/kernel/sched_child_runs_first
+ */
+
+/**
  * CHILD FIRST RATIO: 0.03%
  * PARENT FIRST RATIO: 99.97%
  */
@@ -23,7 +29,6 @@ int main(int argc, char *argv[]) {
             exit(0);
         } else {
             printf("Parent process %d\n", i);
-            wait(NULL);
         }
     }
     return 0;
