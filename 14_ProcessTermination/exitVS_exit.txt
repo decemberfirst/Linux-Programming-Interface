@@ -1,0 +1,9 @@
+exit does the following task:
+     -exit handlers registered with atexit or on_exit are called in reverse order
+     of their registration
+
+     - stdio stream buffers are flushed
+
+     - underlying _exit syscall is called
+
+The reverse is true for _exit call

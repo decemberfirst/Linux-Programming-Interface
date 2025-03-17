@@ -1,0 +1,14 @@
+The wait() system call does the following:
+
+1. If no (previously unwaited-for) child of the calling process has yet terminated,
+the call blocks until one of the children terminates. If a child has already termi-
+nated by the time of the call, wait() returns immediately.
+
+2. If status is not NULL, information about how the child terminated is returned in
+the integer to which status points. We describe the information returned in status
+3. The kernel adds the process CPU times  and resource usage statistics
+to running totals for all children of this parent process.
+
+4. As its function result, wait() returns the process ID of the child that has terminated.
+
+5. wait system calls returns -1 if no child are running or already exited, returns ECHILD errno
