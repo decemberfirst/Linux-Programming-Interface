@@ -1,3 +1,4 @@
+#define _GNU_SOURCE
 #include<stdio.h>
 #include<signal.h>
 #include<stdlib.h>
@@ -21,6 +22,7 @@ int main() {
         sleep(2);
         kill(pid, SIGCONT); // CONTINUE THE CHILD PROCESS
         printf("Sent continue signal to child\n");
+        // see here it is 0, it means wait until child process is terminated
         waitpid(pid, NULL, 0); // WAIT FOR CHILD TO TERMINATE, BECAUSE IT IS RESUMED AGAIN
         printf("Child terminated\n");
         printf("Parent terminated\n");
