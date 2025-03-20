@@ -1,0 +1,5 @@
+Process group is the set of one or more processes sharing the same process group identifier (PGID). process group has one group leader process, that process that creates the process has the same PGID decided
+
+Session is a collection of process group. A process session id is identified by the session identifier (SID), like for process id it was (PID). Session leader is the process that creates the new session and whose process id becomes the session ID. New process inherits this session id
+
+All of the processes in a session share a single controlling terminal. controlling terminal is established when the session leader first open a terminal device. At any point of time one of the process groups in a session is the foreground process group for the terminal and the others are background process groups. only process in the foreground process group can rewad input from the controlling terminal. when the user types one of the signal generating terminal characters on the group, a signal is sent to all the members of the foreground process group.
