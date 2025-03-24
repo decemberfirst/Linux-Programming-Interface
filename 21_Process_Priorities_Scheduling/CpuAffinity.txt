@@ -1,0 +1,11 @@
+to set affinity:
+
+sched_setaffinity(pid, len, cpu_set_t *set);
+MACROS: CPU_ZERO(&set); initialize to zero
+        CPU_SET(1, &set) Add cpu 1 to the set
+        CPU_SET(2, &set) Add cpu 2 to the set
+        CPU_CLR(2, &set) Remove cpu from the set
+        CPU_ISSET(2, &set) Check if cpu exists in set or not
+for len use sizeof(cpu_set_t)
+
+cpu_getaffinity(pid, len, cpu_set_t *set)
