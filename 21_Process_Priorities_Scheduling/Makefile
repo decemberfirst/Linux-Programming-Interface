@@ -8,7 +8,7 @@ CFLAGS = -Wall
 TARGET = main
 
 # Source Files
-SRC = ResetSchedulingForChild.c
+SRC = TimeIntervalOfRR.c
 
 # Build all (compile, clean previous build, and run with args)
 all: $(TARGET) # build target
