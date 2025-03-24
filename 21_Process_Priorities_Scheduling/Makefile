@@ -8,7 +8,7 @@ CFLAGS = -Wall
 TARGET = main
 
 # Source Files
-SRC = CpuSetAffinity.c
+SRC = CpuGetAffinity.c
 
 # Build all (compile, clean previous build, and run with args)
 all: $(TARGET) # build target
