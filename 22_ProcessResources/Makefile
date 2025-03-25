@@ -1,10 +1,10 @@
 CC = gcc
 CFLAGS = -Wall
 TARGET = main
-SRC = GetResourceUsage.c
+SRC = RlimitOptions.c
 
 all: $(TARGET)
-	./$(TARGET)
+	./$(TARGET) i
 	@rm -f $(TARGET)
 
 $(TARGET): $(SRC)
