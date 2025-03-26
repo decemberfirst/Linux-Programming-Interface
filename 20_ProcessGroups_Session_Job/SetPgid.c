@@ -8,7 +8,6 @@
  * if pgid is specfied as 0, the calling process is specified as the leader of the new process group
  *
  * THESE ALL ARE EQUIVALENT:
- *
  setpgid(0, 0);
 setpgid(getpid(), 0);
 setpgid(getpid(), getpid());
